@@ -1,7 +1,7 @@
 # Restaurant Supply Delivery Service: Relational Database Development
 --------------------------------------------------------------------------------
 
-A virtual environment is used to run all the code and corresponding visualization./n
+A virtual environment is used to run all the code and corresponding visualization.
 Please follow the intructions below to setup and run the online system.
 
 ## Useful Links
