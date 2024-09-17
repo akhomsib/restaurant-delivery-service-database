@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Payload{% endblock %}
+{% block content %}
+
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>Drone ID</th>
+        <th>Drone Tag</th>
+        <th>Ingridient ID</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for payload in payloads %}
+    <tr>
+        <td>{{payload.id_id}}</td>
+        <td>{{payload.tag_id}}</td>
+        <td>{{payload.barcode_id}}</td>
+        <td>{{payload.quantity}}</td>
+        <td>{{payload.price}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
