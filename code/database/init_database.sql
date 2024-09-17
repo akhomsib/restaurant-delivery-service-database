@@ -1,5 +1,5 @@
--- CS4400: Introduction to Database Systems (Fall 2022)
--- Project Phase II: Database Schema SOLUTION [v0] Monday, Oct 31, 2022
+-- Restaurant Delivery Service Database
+-- Database Schema
 set global transaction isolation level serializable;
 set global SQL_MODE = 'ANSI,TRADITIONAL';
 set names utf8mb4;
@@ -250,8 +250,8 @@ insert into work_for values
 ('mrobot1', 'rr'), ('ckann5', 'osf'), ('rlopez6', 'rr');
 
 
--- CS4400: Introduction to Database Systems (Fall 2022)
--- Project Phase III: Stored Procedures SHELL [v0] Monday, Oct 31, 2022
+-- Restaurant Delivery Service Database
+-- Stored Procedures
 set global transaction isolation level serializable;
 set global SQL_MODE = 'ANSI,TRADITIONAL';
 set names utf8mb4;
