@@ -1,5 +1,5 @@
 """
-Update this password to match your MySQL databse password.
+Update this password to match your MySQL database password.
 """
 
 PASSWORD = 'password'
