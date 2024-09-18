@@ -54,12 +54,12 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware'
 ]
 
-ROOT_URLCONF = 'phase4.urls'
+ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['frontend'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'phase4.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
