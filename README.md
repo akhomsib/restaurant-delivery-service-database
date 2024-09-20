@@ -12,7 +12,7 @@ Please follow the intructions below to setup and run the online system.
 
 ## How to Set Up & Run
 1. Navigate to the code/database/ directory. Run the `init_database.sql` script in MySQL.
-2. Navigate to the code/ directory in the terminal. Create a Python Virtual Environment <br />
+2. Navigate to the code/ directory in the terminal. Create a Python Virtual Environment using the following command. <br />
    pip -m venv env
 3. Activate the environment with the provided requirements from the `requirements.txt` file based on os. <br />
    python install -r requirements.txt
