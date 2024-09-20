@@ -17,7 +17,7 @@ Please follow the intructions below to setup and run the online system.
    pip -m venv env
 4. Activate the environment with the provided requirements from the requirements.txt file in the code/ directory based on os. <br />
    pip install -r requirements.txt
-5. Update the password in the `secure.py` file to match your MySql database password. This fle is located in the code/setup/ directory. *NEVER PUSH THIS CHANGE TO THE GIT*
+5. Update the password in the `secure.py` file to match your MySQL database password. This fle is located in the code/setup/ directory. *NEVER PUSH THIS CHANGE TO THE GIT*
 6. Navigate to code/ directory in your environment
 7. Run python server in aforementioned directory to serve necessary files using the `manage.py` file and the following command. <br />
    python manage.py runserver
