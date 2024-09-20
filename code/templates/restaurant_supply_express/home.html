@@ -2,37 +2,39 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <div class="container">
-    <h1 class="text-center">4400 Phase4 - Group 73</h1>
+    <h1 class="text-center">Restaurant Supply Express</h1>
+    <h2 class="text-center">Relational Database Development</h2>
+    <h2>Project Overview</h2>
+    <p>
+        This project involved the design, implementation, and documentation of an online system for a restaurant supply delivery service, Restaurant Supply Express. 
+        Classical methodology guided the development of a relational database management system, using MySQL Server. An enhanced entity relationship diagram was 
+        constructed to parse the business use case and reflect its requirements, after which relational and database schema were created using various SQL statements 
+        based on this framework. This has helped improve the data integrity and scalability to prevent corruption and accommodate future growth. For enhanced flexibility 
+        and usability, multiple views and stored procedures were implemented to allow system operators to access information and modify the database. The database  
+        system was integrated with a fully functional web-based application found here for user access. The database tables can be queried and modified from this online 
+        system, using the associated pages linked in the banner above.
+    </p>
     <h2>Useful Links</h2>
     <ul>
         <li><a href="https://www.mysql.com/">MySql (Database)</a></li>
         <li><a href="https://www.djangoproject.com/">Django (Backend)</a></li>
         <li><a href="https://getbootstrap.com/">Bootstrap (Frontend)</a></li>
     </ul>
-    <h2>Team</h2>
-    <ul>
-        <li>Tyler Andrew Keeney</li>
-        <li>Manit Kapoor</li>
-        <li>Felix Maximilian Schlensok</li>
-    </ul>
-    <h2>How to Set Up &amp; Run (Windows)</h2>
+    <h2>How to Set Up &amp; Run</h2>
     <ol>
-        <li>Clone Repo</li>
-        <li>Run \4400_Phase4\phase4\sql\init_database.sql script in MySql</li>
-        <li>(Optional) Create Python Virtual Environment</li>
-        <li>Install requirements from requirements.txt file</li>
-        <li>Update the password in \4400_Phase4\phase4\phase4\secure.py to match MySql database password <strong>NEVER PUSH THIS CHANGE TO THE GIT</strong></li>
-        <li>Navigate to \4400_Phase4\phase4</li>
-        <li>Run <code>python manage.py runserver</code> in aforementioned directory</li>
-        <li>Go to <a href="http://127.0.0.1:8000/restaurant_supply_express/home/">http://127.0.0.1:8000/restaurant_supply_express/home/</a></li>
+        <li>Navigate to the code/database/ directory. Run the <code>init_database.sql</code> script in MySQL.</li>
+        <li>Navigate to the code/ directory in the terminal. Create a python virtual environment using the following command.<br />
+            <code>pip -m venv env</code></li>
+        <li>Activate the environment with the provided requirements from the <code>requirements.txt</code> file based on os.<br />
+            <code>python install -r requirements.txt</code></li>
+        <li>Update the password in the <code>secure.py</code> file to match your MySQL database password. This file is located in the code/setup/ directory. <em>NEVER PUSH THIS CHANGE TO THE GIT</em></li>
+        <li>Run a python server to serve necessary files using the <code>manage.py</code> file and the following command.<br />
+            <code>python manage.py runserver</code></li>
+        <li>Go to <a href="http://127.0.0.1:8000/restaurant_supply_express/home/">http://127.0.0.1:8000/restaurant_supply_express/home/</a> to interact with the online system.</li>
     </ol>
     <h2>Technologies Used</h2>
-    <p>To keep things as simple as possible we decided to use our already existent MySql database backend.
-    We connected that to a Django backend that made database operations simple. To keep the UI looking
-    consistent and to make the UI easy to build we decided to use Bootstrap for the frontend design.</p>
-    <h2>Division of Labor</h2>
-    {% load static %}
-    <img src="{% static 'division.png' %}" class="img-fluid" alt="Division of Labor">
+    <p>A MySQL database is connected to a Django backend that allowed for database operations to be made.<br />
+        To keep the user interface consistent, Bootstrap was used for the frontend design.</p>
 </div>
 
 {% endblock %}
