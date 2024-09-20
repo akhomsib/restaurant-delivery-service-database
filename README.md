@@ -2,7 +2,7 @@
 ## Relational Database Development
 --------------------------------------------------------------------------------
 
-A virtual environment is used to run all the code and corresponding visualization.
+A virtual environment is used to run all the code and corresponding online system. <br />
 Please follow the intructions below to setup and run the online system.
 
 ## Useful Links
@@ -10,12 +10,12 @@ Please follow the intructions below to setup and run the online system.
 * [Django (Backend)](https://www.djangoproject.com/)
 * [Bootstrap (Frontend)](https://getbootstrap.com/)
 
-## How to Set Up & Run (Windows)
+## How to Set Up & Run
 1. Clone this repository to access required materials.
 2. Navigate to the code/database/ directory. Run the `init_database.sql` script in MySQL.
 3. Create Python Virtual Environment <br />
    pip -m venv env
-4. Activate the environment with the provided requirements from the requirements.txt file in the code/ directory. <br />
+4. Activate the environment with the provided requirements from the requirements.txt file in the code/ directory based on os. <br />
    pip install -r requirements.txt
 5. Update the password in the `secure.py` file to match your MySql database password. This fle is located in the code/setup/ directory. *NEVER PUSH THIS CHANGE TO THE GIT*
 6. Navigate to code/ directory in your environment
