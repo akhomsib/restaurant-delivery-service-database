@@ -22,5 +22,5 @@ Please follow the intructions below to setup and run the online system.
 6. Go to http://127.0.0.1:8000/restaurant_supply_express/home/ to interact with the online system
 
 ## Technologies Used
-A MySql database is connected to a Django backend that allowed for database operations to be made. 
+A MySql database is connected to a Django backend that allowed for database operations to be made. <br />
 To keep the user interface consistent, Bootstrap was used for the frontend design.
