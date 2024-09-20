@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Pilots{% endblock %}
+{% block content %}
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>username</th>
+        <th>licenseID</th>
+        <th>Experience as Pilot</th>
+        <th>Number of drones</th>
+        <th>Number of locations</th>
+        <th style="text-align: center;" colspan = '2'>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for pilot in pilots %}
+    <tr>
+        <td>{{pilot.username}}</td>
+        <td>{{pilot.licenseID}}</td>
+        <td>{{pilot.experience}}</td>
+        <td>{{pilot.num_drones}}</td>
+        <td>{{pilot.num_locations}}</td>
+        <td style="text-align: center;">
+            {% if pilot.cant_delete %}
+            <span class="d-inline-block"
+                  tabindex="0"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="This pilot can't be deleted! He is controlling drones.">
+            {% endif %}
+            <button type="button"
+                    class="btn btn-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#removePilotPopup"
+                    data-bs-label="{{ pilot.username }}"
+                    {% if pilot.cant_delete %}
+                    disabled
+                    {% endif %}
+            >
+                Remove pilot role
+            </button>
+            {% if pilot.cant_delete %}
+                </span>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="removePilotPopup" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Remove as pilot</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+                <form class="row g-3" action="" method="post">
+                    {% csrf_token %}
+                    <div class = "fieldWrapper hidden" hidden>
+                        {{ username_form.username }}
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button name="add_pilot" type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+
+{% if add_pilot_form.errors|length != 0 %} 
+const addPopup = new bootstrap.Modal('#addPilotPopup')
+addPopup.show()
+{% endif %}
+
+const removePilotPopup = document.getElementById('removePilotPopup')
+removePilotPopup.addEventListener('show.bs.modal', event => {
+// Button that triggered the modal
+const button = event.relatedTarget
+const username = button.getAttribute('data-bs-label')
+// Update the modal's content.
+const modalBodyInput = removePilotPopup.querySelector('.modal-body p')
+const modalEntityID = removePilotPopup.querySelector('.hidden input')
+
+modalBodyInput.innerHTML = `Are you sure you want to remove <strong>${username}</strong> as a pilot? <br> All information (user, employee) will be deleted too if not a worker!`
+modalEntityID.value = username
+})
+
+{% endblock %}
