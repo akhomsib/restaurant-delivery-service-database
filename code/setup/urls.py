@@ -17,5 +17,5 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('restaurant_supply_express/', include('backend.urls')),
+    path('restaurant_supply_express/', include('restaurant_supply_express.urls')),
 ]
